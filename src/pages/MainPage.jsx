@@ -36,7 +36,7 @@ const MainPage = ({ onUpdate, selectedData, onGenerate }) => {
   );
 }
 
-// Prop validation
+
 MainPage.propTypes = {
   onUpdate: PropTypes.func.isRequired,
   selectedData: PropTypes.array.isRequired,
