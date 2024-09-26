@@ -1,13 +1,10 @@
-import BookImage1 from '../../public/images/book1.jpg'; 
-import BookImage2 from '../../public/images/book2.jpg';
-import BookImage3 from '../../public/images/book3.jpg';
 import { Link } from 'react-router-dom';
 
 const books = [
-    { title: "1984", author: "George Orwell", image: BookImage1 },
-    { title: "To Kill a Mockingbird", author: "Harper Lee", image: BookImage2 },
-    { title: "The Great Gatsby", author: "F. Scott Fitzgerald", image: BookImage3 },
-    { title: "Moby Dick", author: "Herman Melville", image: BookImage1 },
+    { title: "1984", author: "George Orwell", image: "/images/book1.jpg" },
+    { title: "To Kill a Mockingbird", author: "Harper Lee", image: "/images/book2.jpg" },
+    { title: "The Great Gatsby", author: "F. Scott Fitzgerald", image: "/images/book3.jpg" },
+    { title: "Moby Dick", author: "Herman Melville", image: "/images/book1.jpg" },
 ];
 
 const InfoBlock = () => {
@@ -22,7 +19,7 @@ const InfoBlock = () => {
                     <Link to={'/recommendations'} className="bg-white rounded-full px-10 py-2">Book Recommendations</Link>
                 </div>
                 <div>
-                    <img className='md:block hidden rounded-3xl' src={BookImage1} alt="Library" width={400} />
+                    <img className='md:block hidden rounded-3xl' src="/images/book1.jpg" alt="Library" width={400} />
                 </div>
             </div>
             <div className='flex justify-center'>
