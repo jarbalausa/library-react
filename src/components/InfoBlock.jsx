@@ -1,6 +1,6 @@
-import BookImage1 from '../../public/images/book1.jpg'; // Replace with actual book images
-import BookImage2 from '../../public/images/book2.jpg'; // Replace with actual book images
-import BookImage3 from '../../public/images/book3.jpg'; // Replace with actual book images
+import BookImage1 from '../../public/images/book1.jpg'; 
+import BookImage2 from '../../public/images/book2.jpg';
+import BookImage3 from '../../public/images/book3.jpg';
 import { Link } from 'react-router-dom';
 
 const books = [

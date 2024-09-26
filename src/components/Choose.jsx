@@ -1,9 +1,9 @@
 import  { useState } from "react";
-import Genre from "./Genre"; // Assuming you have a Genre component
-import Book from "./Book"; // Assuming you have a Book component
+import Genre from "./Genre";
+import Book from "./Book"; 
 
 const Choose = () => {
-    const apikey = import.meta.env.VITE_API_KEY; // Accessing the API key
+    const apikey = import.meta.env.VITE_API_KEY; 
 
     const genresData = [
         { name: 'Adventure', imageSrc: '/images/adventure.jpg' },
@@ -40,7 +40,6 @@ const Choose = () => {
         );
     };
 
-    // Function to create prompt text based on selected genres and books
     const createPromptText = () => {
         let prompt = 'I am interested in the following genres and books: ';
         prompt += selectedGenres.length > 0 ? selectedGenres.join(', ') : 'No genres selected';
@@ -52,7 +51,7 @@ const Choose = () => {
 
     const fetchData = async () => {
         const promptText = createPromptText();
-        // Example API call using the promptText
+        
         try {
             const response = await fetch("YOUR_API_ENDPOINT", {
                 headers: {
