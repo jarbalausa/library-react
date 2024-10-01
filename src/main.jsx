@@ -7,6 +7,7 @@ import "./index.css";
 import MainPage from "./pages/MainPage.jsx";
 import GenerationPage from "./pages/GenerationPage.jsx";
 import PageNotFound from "./pages/PageNotFound.jsx";
+import About from './pages/About'; 
 
 const onUpdate = (data) => {
   console.log("Updated data: ", data);
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
     ),
     errorElement: <PageNotFound />,
   },
+  {
+    path: '/about',
+    element: <About />, 
+},
   {
     path: "/generate",
     element: <GenerationPage />,
