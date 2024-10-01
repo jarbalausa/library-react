@@ -3,7 +3,7 @@ import Genre from "./Genre";
 import Book from "./Book"; 
 import Options from "./Options";
 import GenerationResult from "./GenerationResult";
-import loading from "./images/loading.gif";
+import loading from '../../public/images/loading.gif';
 
 
 const Choose = () => {
