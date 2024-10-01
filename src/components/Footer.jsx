@@ -35,7 +35,7 @@ const Footer = () => {
           </a>
         </div>
         <div>
-          <p> Library IA . All rights reserved</p>
+          <p> Library AI . All rights reserved</p>
         </div>
       </div>
     </footer>
