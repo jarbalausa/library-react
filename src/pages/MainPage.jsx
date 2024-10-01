@@ -10,7 +10,7 @@ const MainPage = ({ onUpdate, selectedData, onGenerate }) => {
   console.log(onUpdate, selectedData, onGenerate);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col min-h-[400] justify-between">
       <Navbar />
       <InfoBlock />
       
