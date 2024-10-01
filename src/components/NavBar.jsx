@@ -15,6 +15,7 @@ const NavBar = () => {
             <img src={logo} alt="logo" width={100} height={150} />
             <nav className="hidden lg:flex md:space-x-6">
                 <Link to="/" className="hover:underline">Main Page</Link>
+                <Link to="/about" className="hover:underline">About</Link>
                 <Link to="/generate" className="hover:underline">Generation Page</Link>
             </nav>
             <div className="lg:hidden">
@@ -27,6 +28,7 @@ const NavBar = () => {
                 {isMenuOpen && (
                     <nav className="flex flex-col space-y-2 mt-2">
                         <Link to="/" className="hover:underline">Main Page</Link>
+                        <Link to="/about" className="hover:underline">About</Link>
                         <Link to="/generate" className="hover:underline">Generation Page</Link>
                     </nav>
                 )}
