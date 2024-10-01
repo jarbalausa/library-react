@@ -4,6 +4,8 @@ import Book from "./Book";
 
 const Choose = () => {
     const apikey = import.meta.env.VITE_API_KEY; 
+    // const apiurl = import.meta.env.VITE_API_URL;
+    // const [generatedText , setGeneratedText] = useState('');
 
     const genresData = [
         { name: 'Adventure', imageSrc: '/images/adventure.jpg' },
@@ -39,6 +41,31 @@ const Choose = () => {
                 : [...prev, book.title]
         );
     };
+
+    // const generateText = async () => {
+    //     const options = {
+    //         method : "POST",
+    //         heaaders: {
+    //             Authorizition: `Bearer ${apikey}` ,
+    //             "Content-Type":"application/json",
+    //         },
+    //         body: JSON.stringify({
+    //             prompt: text,
+    //             max_tokens: 350,
+                
+    //         }),
+        
+    //     };
+        
+    //     console.log('Text generating ... ');
+        
+    //     try{
+    //         const response = await fetch(apiurl , )
+            
+    //     }catch(error){
+    //         console.error('error:' , error)
+    //     }
+   // }
 
     const createPromptText = () => {
         let prompt = 'I am interested in the following genres and books: ';
