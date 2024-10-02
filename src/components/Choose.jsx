@@ -11,7 +11,7 @@ const Choose = () => {
     const apiurl = import.meta.env.VITE_API_URL;
     
     const [selectedGenres, setSelectedGenres] = useState([]);
-     const [selectedBooks, setSelectedBooks] = useState([]);
+    const [selectedBooks, setSelectedBooks] = useState([]);
     const [gptPromptBook , setGptPromptBook ]=useState([]);
     const [infoFromOptions, setInfoFromOptions] = useState([]);
     const [imageUrl , setImageUrl] = useState([]);
