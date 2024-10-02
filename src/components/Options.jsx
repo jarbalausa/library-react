@@ -82,12 +82,12 @@ const Options = () => {
           onChange={e => setAdditionalCriteria(e.target.value)}
         />
       </div>
-      <div>
+      {/* <div>
           <p>selected genre type: <span className="text-orange-500 font-bold">{genre}</span></p>
           <p>write author: <span className="text-orange-500 font-bold">{author}</span></p>
           <p>selected book type: <span className="text-orange-500 font-bold">{typeOfBook}</span></p>
           <p>selected addtional criteria: <span className="text-orange-500 font-bold">{additionalCriteria}</span></p>
-      </div>
+      </div> */}
     </div> 
 
     
