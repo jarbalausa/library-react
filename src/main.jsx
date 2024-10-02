@@ -23,10 +23,12 @@ const router = createBrowserRouter([
     path: "/",
     element: (
       <MainPage
-        onUpdate={onUpdate}
+        onUpdate={onUpdate }
         selectedData={selectedData}
-        onGenerate={onGenerate}
-      />
+        onGenerate ={onGenerate}
+        
+
+        />
     ),
     errorElement: <PageNotFound />,
   },

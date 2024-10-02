@@ -1,25 +1,29 @@
-import  { useState, useEffect } from 'react';
+import  { useState, useEffect } from "react";
 
-function Options({ onUpdate }) {
+const Options = () => {             
   const [genre, setGenre] = useState('');
   const [author, setAuthor] = useState('');
   const [typeOfBook, setTypeOfBook] = useState('');
   const [additionalCriteria, setAdditionalCriteria] = useState('');
 
-  // Update the parent component when any option changes.
+  const sendInfoOptions = () => {
+    // setInfoFromOptions(`genreType: ${genre} ,author : ${author} ,typeOFBook:${typeOfBook} , AddtionalCriteria ${additionalCriteria}`)
+  }
+
+
   useEffect(() => {
-    handleUpdate();
+    sendInfoOptions();
   }, [genre, author, typeOfBook, additionalCriteria]);
 
-  const handleUpdate = () => {
-    // Only update if some criteria are set
-    onUpdate({
-      genre: genre || null,
-      author: author || null,
-      typeOfBook: typeOfBook || null,
-      additionalCriteria: additionalCriteria || null
-    });
-  };
+  // const handleUpdate = () => {
+  //   // Only update if some criteria are set
+  //   onUpdate({
+  //     genre: genre || null,
+  //     author: author || null,
+  //     typeOfBook: typeOfBook || null,
+  //     additionalCriteria: additionalCriteria || null
+  //   });
+  // };
 
   return (
     <div className="p-4 bg-gray-100 rounded-lg">
@@ -42,6 +46,11 @@ function Options({ onUpdate }) {
 
       <div className="mb-4">
         <label className="block text-gray-700">Favorite Author</label>
+        {/* <select 
+        name = "author"
+        id='author'
+        onChange = {(e) => setAuthor(e.terget.value)}
+        className = 'p;-1 w-[200px' */}
         <input
           className="w-full p-2 border rounded mt-2"
           type="text"
@@ -73,7 +82,15 @@ function Options({ onUpdate }) {
           onChange={e => setAdditionalCriteria(e.target.value)}
         />
       </div>
-    </div>
+      <div>
+          <p>selected genre type: <span className="text-orange-500 font-bold">{genre}</span></p>
+          <p>write author: <span className="text-orange-500 font-bold">{author}</span></p>
+          <p>selected book type: <span className="text-orange-500 font-bold">{typeOfBook}</span></p>
+          <p>selected addtional criteria: <span className="text-orange-500 font-bold">{additionalCriteria}</span></p>
+      </div>
+    </div> 
+
+    
   );
 }
 

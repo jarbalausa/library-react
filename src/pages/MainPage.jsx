@@ -6,7 +6,7 @@ import Options from '../components/Options';
 import Footer from '../components/Footer';
 import PropTypes from 'prop-types';
 
-const MainPage = ({ onUpdate, selectedData, onGenerate }) => {
+const MainPage = ({ onUpdate, selectedData, onGenerate}) => {
   console.log(onUpdate, selectedData, onGenerate);
 
   return (
@@ -18,7 +18,8 @@ const MainPage = ({ onUpdate, selectedData, onGenerate }) => {
         <h1 className="text-2xl font-bold text-center mb-6">Library Book Selector</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Choose onUpdate={onUpdate} selectedData={selectedData} />
-          <Options onUpdate={onUpdate} />
+          <Options />
+          {/* <Options setInfoFromOptions={setInfoFromOptions} /> */}
         </div>
         <div className="flex justify-center mt-6">
           <button
@@ -41,6 +42,8 @@ MainPage.propTypes = {
   onUpdate: PropTypes.func.isRequired,
   selectedData: PropTypes.array.isRequired,
   onGenerate: PropTypes.func.isRequired,
+  // setInfoFromOptions: PropTypes.func.isRequired
+
 };
 
 export default MainPage;

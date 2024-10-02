@@ -16,7 +16,7 @@ const Choose = () => {
     const [infoFromOptions, setInfoFromOptions] = useState([]);
     const [imageUrl , setImageUrl] = useState([]);
     const [responseText , setResponseText] = useState('');
-    const [isLoading , setIsLoading] = useState([]);
+    const [isLoading , setIsLoading] = useState(false);
     const [showResult , setShowResult] = useState([]);
 
 
@@ -137,7 +137,7 @@ const Choose = () => {
 
         try{
             const response = await fetch(
-                "https//api.openai.com/v1/images/generations",
+                "https://api.openai.com/v1/images/generations",
                 options
             );
             const data = await response.json();
@@ -146,8 +146,8 @@ const Choose = () => {
 
             await generateText();
 
-            setIsLoading(false);
             setShowResult(true);
+            setIsLoading(false);
 
         }catch(error){
             setIsLoading(false);
@@ -252,8 +252,8 @@ const Choose = () => {
                     disabled = {isLoading}
                 
                 >
-                    {isLoading ? <img src={loading} alt='loading' width={30} height={30}/> : 'generate book' }
-                    Generate Recommendations
+                    {isLoading ? <img src={loading} alt='loading' width={30} height={30}/> : 'Generate Recommendations' }
+                    
                 </button>
                 <p> isLoading status: {isLoading + ''}</p>
             </div>
