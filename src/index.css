@@ -3,3 +3,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-roboto{
+    font-family: "poppins";
+    src: url("/fonts/Poppins/Poppins-Black.ttf") format("ttf"),
+        url("/fonts/Poppins/Poppins-Medium.ttf") format("ttf");
+    font-weight: normal;
+    font-style:normal;
+
+}
+
+@font-poppins{
+    font-family:"roboto";
+    src: url("/fonts/Roboto/Roboto-ExtraBoldItalic.ttf") format("ttf"),
+        url("/fonts/Roboto/Roboto-Regular.ttf") format("ttf");
+    font-weight:normal;
+    font-style:normal;
+}
+
+body{
+    width:100%;
+    min-height:100vh;
+    padding:0;
+    margin:0;
+}
