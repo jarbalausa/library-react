@@ -2,7 +2,7 @@
 import Navbar from '../components/Navbar';
 import InfoBlock from '../components/InfoBlock';
 import Choose from '../components/Choose';
-// import Options from '../components/Options';
+
 import Footer from '../components/Footer';
 import PropTypes from 'prop-types';
 
