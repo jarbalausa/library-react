@@ -187,11 +187,12 @@ const Choose = () => {
       <div className="flex w-full flex-col items-center xl:flex-row">
         <Options setInfoFromOptions={setInfoFromOptions} />
       </div>
-      <GenerationResult
-        responseText={responseText}
-        imageUrl={imageUrl}
-        showResult={showResult}
-      />
+      <div>
+        {
+            imageUrl ?  <GenerationResult  responseText={responseText}  imageUrl={imageUrl} showResult={showResult} /> : <div></div>
+        }
+      </div>
+     
     </div>
   );
 };
