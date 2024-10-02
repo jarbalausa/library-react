@@ -179,9 +179,10 @@ const Choose = () => {
           {isLoading ? (
             <img src={loading} alt="loading" width={30} height={30} />
           ) : (
-            "Generate Recommendations"
+            "Generate Book"
           )}
         </button>
+        <p>IsLoading status : {isLoading + ''} </p>
       </div>
 
       <div className="flex w-full flex-col items-center xl:flex-row">
