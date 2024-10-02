@@ -1,4 +1,4 @@
-import NavBar from "../components.NavBar";
+import Navbar from "../components.Navbar";
 
 import Footer from "../components/Footer";
 import PropTypes from "prop-types";
@@ -8,7 +8,7 @@ const About = ({ onUpdate, selectedData, onGenerate }) => {
 
   return (
     <div className="flex flex-col min-h-[400] justify-between">
-      <NavBar />
+      <Navbar />
       <div className="container mx-auto p-4">
         <h1 className="text-2xl font-bold text-center mb-6">
           Library Book Selector
