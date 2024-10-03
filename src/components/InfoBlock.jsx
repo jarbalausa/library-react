@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 
 const books = [
-    { title: "1984", author: "George Orwell", image: "/images/book1.jpg" },
+    { title: "1984", author: "George Orwell", image: "/images/comic.jpg" },
     { title: "To Kill a Mockingbird", author: "Harper Lee", image: "/images/book2.jpg" },
     { title: "The Great Gatsby", author: "F. Scott Fitzgerald", image: "/images/book3.jpg" },
-    { title: "Moby Dick", author: "Herman Melville", image: "/images/book1.jpg" },
+    { title: "Moby Dick", author: "Herman Melville", image: "/images/fairytale.jpg" },
 ];
 
 const InfoBlock = () => {

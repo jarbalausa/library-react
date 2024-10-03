@@ -28,7 +28,7 @@ const Choose = () => {
   ];
 
   const booksData = [
-    { title: "1984", author: "George Orwell" , img: "../../public/images/book1.jpg" },
+    { title: "1984", author: "George Orwell" , img:"../../public/images/book1.jpg" },
     { title: "Pride and Prejudice", author: "Jane Austen" },
     { title: "To Kill a Mockingbird", author: "Harper Lee" },
     { title: "The Great Gatsby", author: "F. Scott Fitzgerald" },
@@ -52,7 +52,7 @@ const Choose = () => {
 
   const ChooseGenres = () => {
     return (
-      <div className="flex flex-wrap justify-center gap-4 mb-6">
+      <div className="flex flex-wrap justify-center gap-4 mb-6 max-sm:grid max-sm:grid-col-2 ">
         {genresData.map((genre, index) => (
           <button
             key={index}
@@ -144,19 +144,20 @@ const Choose = () => {
       <h1 className="text-2xl font-bold mb-4">Choose Your Genres</h1>
       <ChooseGenres />
       <h2 className="text-xl font-semibold mb-4">Select Books</h2>
-      <div className="grid grid-cols-2 gap-4 mb-6">
+      <div className="flex flex-row justify-center max-sm:flex-col">
         {booksData.map((book, index) => (
           <Book
             key={index}
             title={book.title}
             author={book.author}
+            img={book.img ? <img src={book.img} alt={book.title} /> : <p>No Image Available</p>}
             isSelected={selectedBooks.includes(book.title)}
             onClick={() => handleBookClick(book)}
           />
         ))}
       </div>
 
-      <div>
+      <div >
         <h3 className="text-lg font-semibold">Selected Genres:</h3>
         <ul className="list-disc pl-5">
           {selectedGenres.map((genre, index) => (
@@ -174,7 +175,7 @@ const Choose = () => {
         
       </div>
 
-      <div className="flex w-full flex-col items-center xl:flex-row">
+      <div className="flex w-full   flex-col justify-center  xl:flex-row max-sm:items-center max-sm:min-w-[30vh]">
         <Options setInfoFromOptions={setInfoFromOptions} />
       </div>
 

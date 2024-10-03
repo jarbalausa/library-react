@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import MainPage from './pages/MainPage';
 import GenerationPage from './pages/GenerationPage';
-import Navbar from './components/NavBar';
+import Navbar from './components/Navbar';
 
 function App() {
   const [selectedData, setSelectedData] = useState({

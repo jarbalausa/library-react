@@ -11,20 +11,21 @@ const NavBar = () => {
     };
 
     return (
-        <div className="bg-gradient-to-r from-green-600 to-green-400 text-white p-4 flex items-center justify-between">
-            <img src={logo} alt="logo" width={100} height={150} />
-            <nav className="hidden lg:flex md:space-x-6">
-                <Link to="/" className="hover:underline">Main Page</Link>
-                <Link to="/about" className="hover:underline">About</Link>
-                <Link to="/generate" className="hover:underline">Generation Page</Link>
+        <div className="bg-gradient-to-r from-green-700 to-green-400 text-white  p-4  flex items-center justify-between font-poppins">
+            <img src={logo} alt="logo" width={150} height={180} />
+            <nav className="hidden lg:flex  md:space-x-6">
+                <Link to="/" className="px-8 text-2xl no-underline hover:text-3xl max-sm:text-2xl ">Main Page</Link>
+                <Link to="/about" className=" px-8 text-2xl no-underline hover:text-3xl max-sm:text-2xl">About</Link>
+                <Link to="/generate" className="px-8 text-2xl no-underline hover:text-3xl max-sm:text-2xl " >Generation Page</Link>
             </nav>
             <div className="lg:hidden">
-                <button
+                <Link to="./public/images/bx-menu.svg"
+            
                     onClick={toggleMenu}
-                    className="text-white border-2 border-white px-4 py-2 rounded-md hover:bg-opacity-50 transition duration-200"
+                    className="text-white border-2 border-white px-4  py-2 rounded-md hover:bg-opacity-50 transition duration-200"
                 >
-                    Menu
-                </button>
+                    
+                </Link>
                 {isMenuOpen && (
                     <nav className="flex flex-col space-y-2 mt-2">
                         <Link to="/" className="hover:underline">Main Page</Link>
@@ -33,7 +34,7 @@ const NavBar = () => {
                     </nav>
                 )}
             </div>
-            <button className="bg-white text-green-600 px-4 py-2 rounded-md hover:bg-gray-200 transition duration-200">
+            <button className="bg-white text-green-600 ml-10  px-4 py-2 text-xl rounded-md hover:bg-gray-200 transition duration-200">
                 Click
             </button>
         </div>
