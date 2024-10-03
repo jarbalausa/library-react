@@ -16,8 +16,8 @@ const InfoBlock = () => {
                     <h1 className="text-yellow-400 text-2xl">Welcome to Our Library!</h1>
                     <p className="text-white text-sm py-5">Discover a world of knowledge and adventure!</p>
                     <div className="flex justify-center md:justify-start">
-                        <Link to={'/newarrivals'} className="bg-green-500 rounded-full px-10 py-2 mr-3">New Arrivals</Link>
-                        <Link to={'/recommendations'} className="bg-white rounded-full px-10 py-2">Book Recommendations</Link>
+                        <Link to={'/about'} className="bg-green-500 rounded-full px-10 py-2 mr-3">About Us</Link>
+                        <Link to={'/generation'} className="bg-white rounded-full px-10 py-2">Generation</Link>
                     </div>
                 </div>
                 <div className="md:ml-10">

@@ -10,7 +10,7 @@ const MainPage = ({ onUpdate, selectedData, onGenerate}) => {
   console.log(onUpdate, selectedData, onGenerate);
 
   return (
-    <div className="flex flex-col min-h-[400] justify-between">
+    <div className="flex flex-col min-h-[100vh] justify-between">
       <Navbar />
       <InfoBlock />
       
@@ -19,7 +19,7 @@ const MainPage = ({ onUpdate, selectedData, onGenerate}) => {
         <div className="flex flex-col min-h-[600] align-center">
           <Choose className="w-full " onUpdate={onUpdate} selectedData={selectedData} />
         </div>
-        <div className="flex justify-center mt-6">
+        {/* <div className="flex justify-center mt-6">
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             onClick={onGenerate}
@@ -27,7 +27,7 @@ const MainPage = ({ onUpdate, selectedData, onGenerate}) => {
           >
             
           </button>
-        </div>
+        </div> */}
       </div>
 
       <Footer />

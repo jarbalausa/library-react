@@ -6,18 +6,20 @@ import Choose from '../components/Choose';
 import Footer from '../components/Footer';
 import PropTypes from 'prop-types';
 
+
 const GeneratePage = ({ onUpdate, selectedData, onGenerate}) => {
   console.log(onUpdate, selectedData, onGenerate);
 
+
   return (
-    <div className="flex flex-col min-h-[400] justify-between">
+    <div className="flex flex-col min-h-[100vh] justify-between">
       <Navbar />
       <div className="container mx-auto p-4">
         <h1 className="text-2xl font-bold text-center mb-6">Library Book Selector</h1>
         <div className="flex flex-col min-h-[600] align-center">
           <Choose className="w-full " onUpdate={onUpdate} selectedData={selectedData} />
         </div>
-        <div className="flex justify-center mt-6">
+        {/* <div className="flex justify-center mt-6">
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             onClick={onGenerate}
@@ -25,7 +27,7 @@ const GeneratePage = ({ onUpdate, selectedData, onGenerate}) => {
           >
             
           </button>
-        </div>
+        </div> */}
       </div>
 
       <Footer />

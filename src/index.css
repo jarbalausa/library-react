@@ -5,8 +5,8 @@
 
 @font-face{
     font-family: "poppins";
-    src: url("/fonts/Poppins/Poppins-Black.ttf") format("ttf"),
-        url("/fonts/Poppins/Poppins-Medium.ttf") format("ttf");
+    src: url("/fonts/Poppins/Poppins-Black.ttf") format("truettf");
+        /* url("/fonts/Poppins/Poppins-Medium.ttf") format("truettf"); */
     font-weight: normal;
     font-style:normal;
 
@@ -25,4 +25,7 @@ body{
     min-height:100vh;
     padding:0;
     margin:0;
+}
+.poppins{
+    font-family:poppins , sans-serif;
 }

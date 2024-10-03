@@ -16,7 +16,7 @@ const Choose = () => {
   const [imageUrl, setImageUrl] = useState([]);
   const [responseText, setResponseText] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [showResult, setShowResult] = useState([]);
+  const [showResult, setShowResult] = useState(false);
 
   const genresData = [
     { name: "Adventure" },
@@ -28,7 +28,7 @@ const Choose = () => {
   ];
 
   const booksData = [
-    { title: "1984", author: "George Orwell" },
+    { title: "1984", author: "George Orwell" , img: "../../public/images/book1.jpg" },
     { title: "Pride and Prejudice", author: "Jane Austen" },
     { title: "To Kill a Mockingbird", author: "Harper Lee" },
     { title: "The Great Gatsby", author: "F. Scott Fitzgerald" },
@@ -171,7 +171,14 @@ const Choose = () => {
           ))}
         </ul>
 
-        <button
+        
+      </div>
+
+      <div className="flex w-full flex-col items-center xl:flex-row">
+        <Options setInfoFromOptions={setInfoFromOptions} />
+      </div>
+
+      <button
           onClick={() => generateImage(createPromptText())}
           className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
           disabled={isLoading}
@@ -182,16 +189,12 @@ const Choose = () => {
             "Generate Book"
           )}
         </button>
-        <p>IsLoading status : {isLoading + ''} </p>
-      </div>
-
-      <div className="flex w-full flex-col items-center xl:flex-row">
-        <Options setInfoFromOptions={setInfoFromOptions} />
-      </div>
+        {/* <p className="flex flex-none">IsLoading status : {isLoading + ''} </p> */}
       <div>
         {
-            imageUrl ?  <GenerationResult  responseText={responseText}  imageUrl={imageUrl} showResult={showResult} /> : <div></div>
+          showResult && <GenerationResult  responseText={responseText}  imageUrl={imageUrl} showResult={showResult} />
         }
+        
       </div>
      
     </div>
