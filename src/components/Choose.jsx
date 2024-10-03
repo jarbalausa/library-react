@@ -28,7 +28,11 @@ const Choose = () => {
   ];
 
   const booksData = [
-    { title: "1984", author: "George Orwell" , img:"../../public/images/book1.jpg" },
+    {
+      title: "1984",
+      author: "George Orwell",
+      img: "../../public/images/book1.jpg",
+    },
     { title: "Pride and Prejudice", author: "Jane Austen" },
     { title: "To Kill a Mockingbird", author: "Harper Lee" },
     { title: "The Great Gatsby", author: "F. Scott Fitzgerald" },
@@ -61,7 +65,7 @@ const Choose = () => {
                         text-base w-36 h-12 
                         mx-2 my-2 cursor-pointer 
                         transition duration-300 ease-in-out 
-                        hover:bg-green-600`}
+                        hover:bg-red-900 hover:text-white hover:w-40 hover:text-xl`}
             onClick={() => handleGenreClick(genre.name)}
           >
             {genre.name}
@@ -141,47 +145,60 @@ const Choose = () => {
 
   return (
     <div className="bg-gray-100 p-6">
-      <h1 className="text-2xl font-bold mb-4">Choose Your Genres</h1>
+      <h1 className="text-5xl font-bold text-center my-10 text-blue-950">
+        Choose Your Genres
+      </h1>
       <ChooseGenres />
-      <h2 className="text-xl font-semibold mb-4">Select Books</h2>
-      <div className="flex flex-row justify-center max-sm:flex-col">
+      <h2 className="text-5xl bg-green-700 text-center py-10 text-white font-semibold my-10">
+        Select Books
+      </h2>
+      <div className="flex flex-row  justify-center max-sm:flex-col">
         {booksData.map((book, index) => (
           <Book
             key={index}
             title={book.title}
             author={book.author}
-            img={book.img ? <img src={book.img} alt={book.title} /> : <p>No Image Available</p>}
+            img={
+              book.img ? (
+                <img src={book.img} alt={book.title} />
+              ) : (
+                <p>No Image Available</p>
+              )
+            }
             isSelected={selectedBooks.includes(book.title)}
             onClick={() => handleBookClick(book)}
           />
         ))}
       </div>
 
-      <div >
-        <h3 className="text-lg font-semibold">Selected Genres:</h3>
+      <div>
+        <h3 className=" font-semibold text-red-800 text-4xl">
+          Selected Genres:
+        </h3>
         <ul className="list-disc pl-5">
           {selectedGenres.map((genre, index) => (
             <li key={index}>{genre}</li>
           ))}
         </ul>
 
-        <h3 className="text-lg font-semibold mt-4">Selected Books:</h3>
+        <h3 className=" font-semibold mt-4 text-4xl text-blue-950">
+          Selected Books:
+        </h3>
         <ul className="list-disc pl-5">
           {selectedBooks.map((book, index) => (
             <li key={index}>{book}</li>
           ))}
         </ul>
-
-        
       </div>
 
       <div className="flex w-full   flex-col justify-center  xl:flex-row max-sm:items-center max-sm:min-w-[30vh]">
         <Options setInfoFromOptions={setInfoFromOptions} />
       </div>
 
-      <button
+      <div className="flex justify-center my-10">
+        <button
           onClick={() => generateImage(createPromptText())}
-          className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
+          className="px-5 py-3 border-green-900 text-green-800 border-double border-4 rounded-lg text-4xl text-bold font-poppins"
           disabled={isLoading}
         >
           {isLoading ? (
@@ -190,14 +207,17 @@ const Choose = () => {
             "Generate Book"
           )}
         </button>
-        {/* <p className="flex flex-none">IsLoading status : {isLoading + ''} </p> */}
-      <div>
-        {
-          showResult && <GenerationResult  responseText={responseText}  imageUrl={imageUrl} showResult={showResult} />
-        }
-        
       </div>
-     
+      {/* <p className="flex flex-none">IsLoading status : {isLoading + ''} </p> */}
+      <div>
+        {showResult && (
+          <GenerationResult
+            responseText={responseText}
+            imageUrl={imageUrl}
+            showResult={showResult}
+          />
+        )}
+      </div>
     </div>
   );
 };

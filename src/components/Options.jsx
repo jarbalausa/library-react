@@ -26,13 +26,13 @@ const Options = () => {
   // };
 
   return (
-    <div className="p-4 bg-gray-100 rounded-lg">
-      <h2 className="text-xl font-semibold mb-4">Options</h2>
+    <div className="my-20 p-20 bg-green-800 rounded-lg ">
+      <h2 className="text-8xl text-yellow-600 font-semibold mb-10">OPTIONS</h2>
 
       <div className="mb-4">
-        <label className="block text-gray-700">Select Genre</label>
+        <label className="block text-white text-2xl">Select Genre</label>
         <select
-          className="w-full p-2 border rounded mt-2"
+          className="w-full p-2 border rounded mt-2 text-xl"
           value={genre}
           onChange={e => setGenre(e.target.value)}
         >
@@ -45,14 +45,14 @@ const Options = () => {
       </div>
 
       <div className="mb-4">
-        <label className="block text-gray-700">Favorite Author</label>
+        <label className="block text-white text-2xl">Favorite Author</label>
         {/* <select 
         name = "author"
         id='author'
         onChange = {(e) => setAuthor(e.terget.value)}
         className = 'p;-1 w-[200px' */}
         <input
-          className="w-full p-2 border rounded mt-2"
+          className="w-full p-2 border rounded mt-2 text-xl text-blue-950"
           type="text"
           value={author}
           onChange={e => setAuthor(e.target.value)}
@@ -60,9 +60,9 @@ const Options = () => {
       </div>
 
       <div className="mb-4">
-        <label className="block text-gray-700">Type of Book</label>
+        <label className="block text-white text-2xl">Type of Book</label>
         <select
-          className="w-full p-2 border rounded mt-2"
+          className="w-full p-2 border rounded mt-2 text-xl text-blue-950"
           value={typeOfBook}
           onChange={e => setTypeOfBook(e.target.value)}
         >
@@ -74,9 +74,10 @@ const Options = () => {
       </div>
 
       <div className="mb-4">
-        <label className="block text-gray-700">Additional Criteria</label>
+        <label className="block text-white text-2xl">Additional Criteria</label>
         <input
-          className="w-full p-2 border rounded mt-2"
+          className="w-full p-2 border rounded mt-2 text-xl
+           text-blue-950"
           type="text"
           value={additionalCriteria}
           onChange={e => setAdditionalCriteria(e.target.value)}

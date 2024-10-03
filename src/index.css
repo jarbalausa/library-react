@@ -14,8 +14,8 @@
 
 @font-face{
     font-family:"roboto";
-    src: url("/fonts/Roboto/Roboto-ExtraBoldItalic.ttf") format("ttf"),
-        url("/fonts/Roboto/Roboto-Regular.ttf") format("ttf");
+    src: url("/fonts/Roboto/Roboto-ExtraBoldItalic.ttf") format("truettf");
+        /* url("/fonts/Roboto/Roboto-Regular.ttf") format("ttf"); */
     font-weight:normal;
     font-style:normal;
 }

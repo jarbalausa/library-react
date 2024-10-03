@@ -10,17 +10,16 @@ const Footer = () => {
           />
         </div>
 
-        <div className="mb-4">
+        <div className="mb-10 text-3xl">
           <p>Contact Us:</p>
           <p>
-            Email :
-            <a href="mailto:your-email@gmail.com" className="text-green-400">
-              balausanisa@gmail.com
+            <a href="mailto:balausanisa@gmail.com" className="text-green-400">
+              Email
             </a>
           </p>
         </div>
-        <div className="mb-4">
-          <p>Follow Us On:</p>
+        <div className="mb-4 text-3xl">
+          <p>Follow Us On</p>
           <a
             href="https://www.instagram.com/library.almaty/"
             className="text-green-400 mx-2"
@@ -34,7 +33,7 @@ const Footer = () => {
             GitHub
           </a>
         </div>
-        <div>
+        <div className=" my-10 text-3xl">
           <p> Library AI . All rights reserved</p>
         </div>
       </div>

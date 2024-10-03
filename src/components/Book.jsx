@@ -10,19 +10,19 @@ const Book = ({ title, author, coverImage, onSelect, description, googleBooksLin
   };
 
   return (
-    <div className="border rounded-lg shadow-md overflow-hidden p-4 m-2 bg-white">
+    <div className="border rounded-lg shadow-md overflow-hidden p-10 m-5 bg-gray-200">
       <img
         src={coverImage}
         alt={title}
         className="w-full h-48 object-cover rounded-lg mb-2"
       />
 
-      <h2 className="text-lg font-semibold">{title}</h2>
-      <p className="text-gray-600">{author}</p>
-      <p className="text-gray-500 text-sm">{description}</p>
+      <h2 className="text-3xl font-poppins text-red-950 pb-2">{title}</h2>
+      <p className="text-blue-950 text-2xl pb-2">{author}</p>
+      <p className="text-gray-600 text-xl pb-2">{description}</p>
       <button
         onClick={handleViewDetails} 
-        className="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        className="mt-2 text-2xl bg-green-800 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
       >
         View Details
       </button>

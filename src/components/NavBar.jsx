@@ -19,13 +19,12 @@ const NavBar = () => {
                 <Link to="/generate" className="px-8 text-2xl no-underline hover:text-3xl max-sm:text-2xl " >Generation Page</Link>
             </nav>
             <div className="lg:hidden">
-                <Link to="./public/images/bx-menu.svg"
-            
+                <button
                     onClick={toggleMenu}
-                    className="text-white border-2 border-white px-4  py-2 rounded-md hover:bg-opacity-50 transition duration-200"
+                    className="text-white border-2 border-white px-4 font-roboto py-2 rounded-md hover:bg-opacity-50 transition duration-200"
                 >
-                    
-                </Link>
+                    menu
+                </button>
                 {isMenuOpen && (
                     <nav className="flex flex-col space-y-2 mt-2">
                         <Link to="/" className="hover:underline">Main Page</Link>
@@ -35,7 +34,7 @@ const NavBar = () => {
                 )}
             </div>
             <button className="bg-white text-green-600 ml-10  px-4 py-2 text-xl rounded-md hover:bg-gray-200 transition duration-200">
-                Click
+                click
             </button>
         </div>
     );
