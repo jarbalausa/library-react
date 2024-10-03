@@ -10,14 +10,14 @@ const books = [
 const InfoBlock = () => {
     return (
         <div className='bg-gray-800'>
-            {/* Library Section */}
-            <div className="flex flex-col md:flex-row justify-center items-center py-10 pt-20 font-roboto ">
+            {/* Library Section   sm:grid sm:grid-row  */}
+            <div className="  flex flex-col md:flex-row justify-center items-center py-10 pt-20 font-roboto">
                 <div className="text-center mr-9 md:text-left md:w-[500px] w-[300px]">
-                    <h1 className="text-yellow-400 text-9xl font-poppins mr-20">Welcome to AI Library!</h1>
-                    <p className="text-white text-4xl py-5">Discover a world of knowledge and adventure!</p>
+                    <h1 className="text-yellow-400 lg:text-9xl font-poppins mr-20 md:text-6xl sm:text-4xl">Welcome to AI Library!</h1>
+                    <p className="text-white lg:text-3xl py-5 md:text-2xl sm:text-xl">Discover a world of knowledge and adventure!</p>
                     <div className="flex justify-center md:justify-start">
-                        <Link to={'/about'} className="bg-green-700 rounded-full px-10 py-3  mr-4 text-3xl text-green-950">about us</Link>
-                        <Link to={'/generation'} className="bg-white rounded-full px-10 py-3 text-3xl text-green-800">generation</Link>
+                        <Link to={'/about'} className="bg-green-700 rounded-full px-10 py-3  mr-4 lg:text-3xl sm:text-xl text-green-950">about us</Link>
+                        <Link to={'/generate'} className="bg-white rounded-full px-10 py-3 lg:text-3xl sm:text-xl text-green-800">generation</Link>
                     </div>
                 </div>
                 <div className="md:ml-10">
@@ -26,12 +26,12 @@ const InfoBlock = () => {
             </div>
 
             <div className='flex justify-center my-30'>
-                <div className='w-[925px] pb-10 text-red-800 font-bold text-center text-2xl mt-30'>
-                    <p>Reading is not just a pastime;   It’s a way to expand your horizons and grow intellectually.    Dive into our various genres and find your next favorite book!</p>
+                <div className='w-[925px] pb-10 text-white font-bold text-center text-2xl mt-30'>
+                    <p>Reading is not just a pastime; It’s a way to expand your horizons and grow intellectually. Dive into our various genres and find your next favorite book!</p>
                 </div>
             </div>
 
-            <h2 className='mt-40 my-10 text-white text-center mb-5 text-5xl bg-green-800 py-10 font-poppins' >Featured Books</h2>
+            <h2 className='mt-40 my-10 text-white text-center mb-5 text-5xl bg-green-800 py-10 font-poppins ' >Featured Books</h2>
             <div className='flex flex-wrap justify-center mt-20 mx-30 mb-40'>
                 {books.map((book, index) => (
                     <div key={index} className="border rounded-lg shadow-lg overflow-hidden bg-white m-5">
