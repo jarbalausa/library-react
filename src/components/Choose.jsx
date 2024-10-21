@@ -62,7 +62,7 @@ const Choose = () => {
             key={index}
             className={`bg-gray-800 text-green-300 border-none 
                         rounded-full flex items-center justify-center 
-                        text-base w-36 h-12 
+                        text-2xl w-36 h-12 
                         mx-2 my-2 cursor-pointer 
                         transition duration-300 ease-in-out 
                         hover:bg-red-900 hover:text-white hover:w-40 hover:text-xl`}

@@ -13,8 +13,8 @@ const InfoBlock = () => {
             {/* Library Section   sm:grid sm:grid-row  */}
             <div className="  flex flex-col md:flex-row justify-center items-center py-10 pt-20 font-roboto">
                 <div className="text-center mr-9 md:text-left md:w-[500px] w-[300px]">
-                    <h1 className="text-yellow-400 lg:text-9xl font-poppins mr-20 md:text-6xl sm:text-4xl">Welcome to AI Library!</h1>
-                    <p className="text-white lg:text-3xl py-5 md:text-2xl sm:text-xl">Discover a world of knowledge and adventure!</p>
+                    <h1 className="text-yellow-400 my-10 lg:text-9xl font-poppins mr-20 md:text-6xl sm:text-4xl">Welcome to AI Library!</h1>
+                    <p className="text-white lg:text-2xl py-5 md:text-xl sm:text-xl">Discover a world of knowledge and adventure!</p>
                     <div className="flex justify-center md:justify-start">
                         <Link to={'/about'} className="bg-green-700 rounded-full px-10 py-3  mr-4 lg:text-3xl sm:text-xl text-green-950">about us</Link>
                         <Link to={'/generate'} className="bg-white rounded-full px-10 py-3 lg:text-3xl sm:text-xl text-green-800">generation</Link>

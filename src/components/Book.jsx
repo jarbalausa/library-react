@@ -1,4 +1,3 @@
-// import React from "react";
 import PropTypes from "prop-types";
 
 const Book = ({ title, author, coverImage, onSelect, description, googleBooksLink }) => {
@@ -85,7 +84,7 @@ const BookList = () => {
           coverImage={book.coverImage}
           description={book.description}
           googleBooksLink={book.googleBooksLink}
-          onSelect={handleSelect} // Pass the onSelect function
+          onSelect={handleSelect} 
         />
       ))}
     </div>
